@@ -8,7 +8,7 @@ from app.auth.supabase_auth import get_current_user
 slot_router = APIRouter(prefix="/slots", tags=["Slots"])
 
 @slot_router.get("/")
-def available_slots(user = Depends(get_current_user), db: Session = Depends(get_db)):
+def available_slots(db: Session = Depends(get_db)):
     return {"available_slots": get_available_slots(db)}
 
 @slot_router.post("/book")

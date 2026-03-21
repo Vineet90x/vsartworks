@@ -4,4 +4,3 @@ Base = declarative_base()
 
 # Import all models here
 from app.models.monthly_capacity import MonthlyCapacity
-from app.models.user import User
